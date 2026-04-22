@@ -1,244 +1,218 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PUMA TRAVEL GROUP - Agency V3</title><meta name="description" content="PUMA TRAVEL GROUP - Travel Sumatera aman, nyaman, cepat. Booking online WhatsApp.">
-<meta name="keywords" content="travel pekanbaru, travel medan, travel padang, puma travel">
-<meta name="author" content="PUMA TRAVEL GROUP"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
 
-:root{
-  --bg:#0b1220;
-  --card:rgba(255,255,255,0.06);
-  --text:#fff;
-  --gold:#ffd700;
+<title>PUMA Travel Group | Travel Sumatera Terpercaya</title>
+
+<!-- SEO GOOGLE -->
+<meta name="description" content="PUMA Travel Group melayani travel Pekanbaru, Medan, Padang, Sibolga, Jambi dengan armada Innova nyaman dan terpercaya. Booking cepat via WhatsApp.">
+<meta name="keywords" content="travel pekanbaru medan, travel sumut, puma travel group, travel padang">
+<meta name="author" content="PUMA Travel Group">
+
+<!-- GOOGLE RICH RESULT (Schema) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "PUMA Travel Group",
+  "telephone": "+6282384500099",
+  "areaServed": "Sumatera",
+  "description": "Travel Pekanbaru ke berbagai kota Sumatera dengan armada nyaman dan terpercaya"
 }
+</script>
 
-body.light{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --text:#111;
-  --gold:#d4a200;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  transition:0.3s;
-  overflow-x:hidden;
-}
-
-/* LOADING */
-#loading{
-position:fixed;inset:0;
-background:var(--bg);
-display:flex;align-items:center;justify-content:center;
-z-index:9999;
-color:var(--gold);
-font-size:20px;
-}
-
-/* NAV */
-.nav{
-position:fixed;top:0;width:100%;
-display:flex;justify-content:space-between;align-items:center;
-padding:10px 18px;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-.nav img{height:35px;}
-.nav a{color:var(--text);margin-left:10px;text-decoration:none;font-size:13px;}
-
-.toggle{
-background:var(--gold);
-border:none;
-padding:6px 10px;
-border-radius:20px;
-cursor:pointer;
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
 }
 
 /* HERO */
-.hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),url('innova.png');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
+.hero {
+  height: 65vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('innova.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.hero h1{font-size:42px;color:var(--gold);}
-.hero p{margin-top:10px;opacity:0.8;}
+.hero h1 { font-size: 40px; margin: 0; }
+.hero p { font-size: 18px; }
 
-.car{
-position:absolute;
-bottom:20px;
-left:-200px;
-width:120px;
-animation:drive 8s linear infinite;
-}
-
-@keyframes drive{
-0%{left:-200px;}
-100%{left:110%;}
-}
-
-.btn{
-background:#22c55e;
-padding:12px 18px;
-border-radius:30px;
-color:#fff;
-text-decoration:none;
-margin-top:15px;
-display:inline-block;
+.btn {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 /* CONTAINER */
-.container{max-width:1000px;margin:auto;padding:60px 18px;}
-.title{text-align:center;color:var(--gold);margin-bottom:15px;}
+.container { padding: 20px; }
 
-.search{
-width:100%;padding:12px;border-radius:10px;margin-bottom:15px;
-border:none;
-outline:none;
+/* CARD */
+.card {
+  background: white;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
-.card{
-background:var(--card);
-padding:12px;
-margin:8px 0;
-border-radius:12px;
-display:flex;
-justify-content:space-between;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+/* LIST */
+ul { padding-left: 18px; }
+
+/* FLOAT WA */
+.float-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.card:hover{transform:scale(1.02);transition:0.3s;}
-
-/* FLOAT */
-.wa,.call{
-position:fixed;
-right:15px;
-background:#22c55e;
-color:white;
-padding:14px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
+/* TESTIMONI */
+.testimoni {
+  font-style: italic;
+  color: #444;
 }
-.wa{bottom:20px;}
-.call{bottom:80px;background:#3b82f6;}
+</style>
 
-/* MODAL */
-.modal{
-position:fixed;inset:0;
-background:rgba(0,0,0,0.6);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:2000;
-}
-.modal-content{
-background:var(--bg);
-padding:20px;
-border-radius:12px;
-width:90%;max-width:400px;
-}
+</head>
 
-input,select{
-width:100%;padding:10px;margin:6px 0;
-border-radius:8px;
-border:1px solid #444;
-background:transparent;
-color:var(--text);
-}
+<body>
 
-.close{float:right;cursor:pointer;color:red;}
-
-.fade{opacity:0;transform:translateY(20px);transition:1s;}
-.show{opacity:1;transform:translateY(0);}
-
-</style></head>
-<body><div id="loading">🚘 Loading PUMA Travel...</div><div class="nav">
-<img src="logo.png" alt="logo">
-<div>
-<a href="#rute">Rute</a>
-<a href="#testi">Testimoni</a>
-<button class="toggle" onclick="toggleTheme()">Mode</button>
+<!-- HERO -->
+<div class="hero">
+  <h1>PUMA TRAVEL GROUP</h1>
+  <p>🚘 Aman • Nyaman • Cepat • Terpercaya</p>
+  <a class="btn" href="#booking">Booking Sekarang</a>
 </div>
-</div><div class="hero">
-<div>
-<h1>PUMA TRAVEL GROUP</h1>
-<p>Aman • Nyaman • Cepat</p>
-<a class="btn" onclick="openModal()">Booking Sekarang</a>
+
+<div class="container">
+
+  <!-- JURUSAN -->
+  <div class="card">
+    <h2>🚘 Jurusan Travel</h2>
+    <ul>
+      <li>Pekanbaru 👉 Sidimpuan : 200.000</li>
+      <li>Pekanbaru 👉 Panyabungan : 250.000</li>
+      <li>Pekanbaru 👉 Sibolga : 250.000</li>
+      <li>Pekanbaru 👉 Sorkam : 280.000</li>
+      <li>Pekanbaru 👉 Dumai</li>
+      <li>Pekanbaru 👉 Medan</li>
+      <li>Pekanbaru 👉 Padang</li>
+      <li>Pekanbaru 👉 Jambi</li>
+      <li>Pekanbaru 👉 Bengkulu</li>
+      <li>Pekanbaru 👉 Buton</li>
+    </ul>
+  </div>
+
+  <!-- ARMADA -->
+  <div class="card">
+    <h2>🚗 Armada Kami</h2>
+    <img src="innova.png" style="width:100%;border-radius:10px;">
+    <p>Innova nyaman, AC dingin, bersih, siap perjalanan jauh.</p>
+  </div>
+
+  <!-- TESTIMONI -->
+  <div class="card">
+    <h2>⭐ Testimoni Pelanggan</h2>
+
+    <p class="testimoni">“Pelayanan bagus, mobil nyaman, driver sopan. Recommended!”</p>
+    <p>- Andi, Medan</p>
+
+    <p class="testimoni">“Selalu tepat waktu, perjalanan aman sampai tujuan.”</p>
+    <p>- Sari, Pekanbaru</p>
+  </div>
+
+  <!-- GOOGLE MAPS -->
+  <div class="card">
+    <h2>📍 Lokasi / Area Layanan</h2>
+    <p>PUMA Travel Group melayani seluruh rute Sumatera dari Pekanbaru.</p>
+
+    <iframe
+      src="https://www.google.com/maps?q=Pekanbaru&output=embed"
+      width="100%" height="250"
+      style="border:0; border-radius:10px;">
+    </iframe>
+  </div>
+
+  <!-- BOOKING -->
+  <div class="card" id="booking">
+    <h2>📲 Booking Sekarang</h2>
+
+    <input type="text" id="nama" placeholder="Nama Lengkap">
+    <input type="date" id="tanggal">
+
+    <select id="tujuan">
+      <option value="">Pilih Tujuan</option>
+      <option>Pekanbaru - Sidimpuan</option>
+      <option>Pekanbaru - Panyabungan</option>
+      <option>Pekanbaru - Sibolga</option>
+      <option>Pekanbaru - Sorkam</option>
+      <option>Pekanbaru - Dumai</option>
+      <option>Pekanbaru - Medan</option>
+      <option>Pekanbaru - Padang</option>
+      <option>Pekanbaru - Jambi</option>
+      <option>Pekanbaru - Bengkulu</option>
+      <option>Pekanbaru - Buton</option>
+    </select>
+
+    <input type="text" id="wa" placeholder="Nomor WhatsApp">
+
+    <button onclick="kirimWA()">Kirim Booking</button>
+  </div>
+
 </div>
-<img class="car" src="innova.png">
-</div><div class="container fade" id="rute">
-<h2 class="title">JURUSAN</h2>
-<input class="search" onkeyup="filterRute(this.value)" placeholder="Cari tujuan..."><div id="list">
-<div class="card">PEKANBARU 👉 SIDEMPUAN <b>200.000</b></div>
-<div class="card">PEKANBARU 👉 PANYABUNGAN <b>250.000</b></div>
-<div class="card">PEKANBARU 👉 SIBOLGA <b>250.000</b></div>
-<div class="card">PEKANBARU 👉 MEDAN <b>350.000</b></div>
-<div class="card">PEKANBARU 👉 PADANG <b>200.000</b></div>
-</div>
-</div><div class="container fade" id="testi">
-<h2 class="title">TESTIMONI</h2>
-<p>"Cepat & aman" - Rina</p>
-<p>"Driver ramah" - Andi</p>
-</div><a class="wa" href="https://wa.me/6282384500099">💬</a> <a class="call" href="tel:082384500099">📞</a>
 
-<!-- MODAL --><div class="modal" id="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">X</span>
-<h3>Booking Travel</h3>
-<input id="nama" placeholder="Nama">
-<input id="tanggal" type="date">
-<select id="tujuan">
-<option>SIDEMPUAN</option>
-<option>PANYABUNGAN</option>
-<option>SIBOLGA</option>
-<option>MEDAN</option>
-<option>PADANG</option>
-</select>
-<button class="btn" onclick="sendWA()">Kirim</button>
-</div>
-</div><script>
-window.onload=()=>loading.style.display='none';
+<!-- FLOAT WA -->
+<a class="float-wa" href="https://wa.me/6282384500099" target="_blank">
+💬 Chat
+</a>
 
-function openModal(){modal.style.display='flex'}
-function closeModal(){modal.style.display='none'}
+<script>
+function kirimWA() {
+  let nama = document.getElementById("nama").value;
+  let tanggal = document.getElementById("tanggal").value;
+  let tujuan = document.getElementById("tujuan").value;
+  let wa = document.getElementById("wa").value;
 
-function toggleTheme(){document.body.classList.toggle('light')}
+  if(!nama || !tanggal || !tujuan || !wa){
+    alert("Lengkapi dulu data min 🙏");
+    return;
+  }
 
-function sendWA(){
-let msg=`Nama:${nama.value}\nTanggal:${tanggal.value}\nTujuan:${tujuan.value}`;
-window.open("https://wa.me/6282384500099?text="+encodeURIComponent(msg));
+  let nomorAdmin = "6282384500099";
+
+  let pesan =
+`🔥 BOOKING PUMA TRAVEL 🔥
+
+Nama: ${nama}
+Tanggal: ${tanggal}
+Tujuan: ${tujuan}
+No WA: ${wa}
+
+Mohon konfirmasi 🙏`;
+
+  window.open(`https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesan)}`, "_blank");
 }
+</script>
 
-function filterRute(v){
-let cards=document.querySelectorAll('.card');
-cards.forEach(c=>{
-c.style.display=c.innerText.toLowerCase().includes(v.toLowerCase())?'flex':'none';
-});
-}
-
-const el=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-el.forEach(e=>{
-if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('show');
-});
-});
-</script><!-- SEO SCHEMA --><script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"TravelAgency",
-"name":"PUMA TRAVEL GROUP",
-"telephone":"082384500099"
-}
-</script></body>
+</body>
 </html>
