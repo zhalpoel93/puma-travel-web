@@ -1,174 +1,253 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUMA Travel Group</title>
-  <style>
-    * { box-sizing: border-box; }body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0b1220, #111827);
-  color: #fff;
-  animation: fadeIn 1s ease-in;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PUMA TRAVEL GROUP</title>
+
+<meta name="description" content="PUMA TRAVEL GROUP - Travel aman, nyaman, dan tepat waktu. Rute Pekanbaru, Medan, Padang, dan lainnya. Booking mudah via WhatsApp.">
+<meta name="keywords" content="travel pekanbaru, travel medan, travel padang, puma travel group">
+<meta name="author" content="PUMA TRAVEL">
+
+<style>
+
+/* LOADING SCREEN */
+#loading{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:#0b1220;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  color:#ffd700;
+  font-size:20px;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
+/* BODY */
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b1220;
+  color:white;
 }
 
-header {
-  background: rgba(17, 24, 39, 0.9);
+/* NAV */
+.nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:10px 20px;
+  background:rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  z-index:1000;
+}
+.nav h2{color:#ffd700;}
+.nav a{color:white;margin-left:10px;text-decoration:none;}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+  url('innova.png');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero h1{
+  font-size:45px;
+  color:#ffd700;
+}
+.hero p{color:#cbd5e1;}
+
+/* CONTAINER */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:50px 20px;
 }
 
-header img { width: 40px; margin-right: 10px; }
-
-header h1 {
-  font-size: 20px;
-  margin: 0;
-  letter-spacing: 2px;
-  color: #facc15;
+/* GLASS CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:12px;
+  margin:10px 0;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  transition:0.3s;
+}
+.card:hover{
+  transform:scale(1.03);
+  background:rgba(255,255,255,0.1);
 }
 
-.hero {
-  text-align: center;
-  padding: 30px 15px;
+/* BUTTON */
+.btn{
+  background:#22c55e;
+  padding:12px 22px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  display:inline-block;
 }
 
-.hero img {
-  width: 100%;
-  max-width: 520px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+/* SECTION ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:1s;
+}
+.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.box {
-  background: rgba(17, 24, 39, 0.9);
-  margin: 15px;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+/* TESTIMONI */
+.testimoni{
+  text-align:center;
+  color:#cbd5e1;
+  font-style:italic;
 }
 
-.wa {
-  display: inline-block;
-  margin-top: 10px;
-  background: #22c55e;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+/* FLOAT WA */
+.wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#22c55e;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+  color:white;
+  text-decoration:none;
 }
 
-input, select, button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
-}
-
-button {
-  background: #facc15;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover { background: #eab308; }
-
-.price {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #22c55e;
-}
-
-.routes {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-  </style>
+</style>
 </head>
-<body><header>
-  <img src="benner.png" alt="Banner">
-  <h1>PUMA TRAVEL GROUP</h1>
-</header><section class="hero">
-  <h2>Aman • Nyaman • Tepat Waktu</h2>
-  <img src="innova-hitam-putih.png" alt="Innova">
-</section><section class="box">
-  <h3>🚘 Jurusan & Harga</h3>
-  <div class="routes">
-    PEKANBARU 👉 SIDEMPUAN 200.000<br>
-    PEKANBARU 👉 PANYABUNGAN 250.000<br>
-    PEKANBARU 👉 SIBOLGA 250.000<br>
-    PEKANBARU 👉 SORKAM 280.000<br>
-    PEKANBARU 👉 DUMAI 160.000<br>
-    PEKANBARU 👉 MEDAN 350.000<br>
-    PEKANBARU 👉 PADANG 200.000<br>
-    PEKANBARU 👉 JAMBI 250.000<br><br>P. BARU 👉 SIAK<br>
-P. BARU 👉 BUTON<br>
-P. BARU 👉 TEMBILAHAN<br>
-P. BARU 👉 BENGKULU
 
+<body>
+
+<!-- LOADING -->
+<div id="loading">🚘 PUMA TRAVEL LOADING...</div>
+
+<!-- NAV -->
+<div class="nav">
+  <h2>PUMA TRAVEL</h2>
+  <div>
+    <a href="#rute">Rute</a>
+    <a href="#booking">Booking</a>
+    <a href="#testi">Testimoni</a>
   </div>
-</section><section class="box">
-  <h3>🧮 Simulasi Harga</h3>  <select id="tujuan">
-    <option value="">Pilih Tujuan</option>
-    <option value="200000">Sidempuan</option>
-    <option value="250000">Panyabungan</option>
-    <option value="250000">Sibolga</option>
-    <option value="280000">Sorkam</option>
-    <option value="160000">Dumai</option>
-    <option value="350000">Medan</option>
-    <option value="200000">Padang</option>
-    <option value="250000">Jambi</option>
-  </select>  <input type="number" id="orang" placeholder="Jumlah Penumpang"><button onclick="hitung()">Hitung Harga</button>
+</div>
 
-  <div class="price" id="hasil"></div>
-</section><section class="box">
-  <h3>📞 WhatsApp</h3>
-  <a class="wa" href="https://wa.me/6282384500099" target="_blank">Chat Sekarang</a>
-</section><section class="box">
-  <h3>📝 Booking</h3>
-  <input type="text" id="nama" placeholder="Nama">
-  <input type="date" id="tanggal">
-  <input type="text" id="tujuan2" placeholder="Tujuan">
-  <button onclick="kirimWA()">Kirim ke WhatsApp</button>
-</section><script>
-function hitung() {
-  let harga = parseInt(document.getElementById('tujuan').value);
-  let orang = parseInt(document.getElementById('orang').value);
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>PUMA TRAVEL GROUP</h1>
+    <p>🚘 Aman • Nyaman • Tepat Waktu 🚘</p>
+    <a class="btn" href="#booking">Booking Sekarang</a>
+  </div>
+</div>
 
-  if (!harga || !orang) {
-    document.getElementById('hasil').innerText = "Isi data dulu";
-    return;
-  }
+<!-- RUTE -->
+<div class="container fade" id="rute">
 
-  let total = harga * orang;
+<h2 style="text-align:center;color:#ffd700;">JURUSAN & HARGA</h2>
 
-  if (orang >= 3) total *= 0.9;
+<div class="card">PEKANBARU 👉 SIDEMPUAN <b>200.000</b></div>
+<div class="card">PEKANBARU 👉 PANYABUNGAN <b>250.000</b></div>
+<div class="card">PEKANBARU 👉 SIBOLGA <b>250.000</b></div>
+<div class="card">PEKANBARU 👉 SORKAM <b>280.000</b></div>
+<div class="card">PEKANBARU 👉 DUMAI <b>160.000</b></div>
+<div class="card">PEKANBARU 👉 MEDAN <b>350.000</b></div>
+<div class="card">PEKANBARU 👉 PADANG <b>200.000</b></div>
+<div class="card">PEKANBARU 👉 JAMBI <b>250.000</b></div>
 
-  document.getElementById('hasil').innerText = "Total: Rp" + total.toLocaleString();
+</div>
+
+<!-- BOOKING -->
+<div class="container fade" id="booking">
+
+<h2 style="text-align:center;color:#ffd700;">BOOKING</h2>
+
+<form onsubmit="sendWA(); return false;">
+
+<input id="nama" placeholder="Nama" required>
+<input id="tanggal" type="date" required>
+
+<select id="tujuan" required>
+<option value="">Tujuan</option>
+<option>SIDEMPUAN</option>
+<option>PANYABUNGAN</option>
+<option>SIBOLGA</option>
+<option>SORKAM</option>
+<option>DUMAI</option>
+<option>MEDAN</option>
+<option>PADANG</option>
+<option>JAMBI</option>
+</select>
+
+<button class="btn" type="submit">KIRIM BOOKING</button>
+</form>
+
+</div>
+
+<!-- TESTIMONI -->
+<div class="container fade" id="testi">
+
+<h2 style="text-align:center;color:#ffd700;">TESTIMONI</h2>
+
+<p class="testimoni">“Pelayanan cepat dan mobil nyaman 👍” - Rina</p>
+<p class="testimoni">“Driver ramah, perjalanan aman” - Andi</p>
+
+</div>
+
+<!-- WA -->
+<a class="wa" href="https://wa.me/6282384500099">💬</a>
+
+<script>
+
+/* LOADING */
+window.onload = function(){
+  document.getElementById('loading').style.display='none';
 }
 
-function kirimWA() {
-  let nama = document.getElementById('nama').value;
-  let tanggal = document.getElementById('tanggal').value;
-  let tujuan = document.getElementById('tujuan2').value;
+/* SCROLL ANIMASI */
+const elements = document.querySelectorAll('.fade');
 
-  let pesan = `Halo PUMA Travel,%0A%0ANama: ${nama}%0ATanggal: ${tanggal}%0ATujuan: ${tujuan}%0A%0ABooking perjalanan.`;
+window.addEventListener('scroll', ()=>{
+  elements.forEach(el=>{
+    let top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight){
+      el.classList.add('show');
+    }
+  });
+});
 
-  window.open("https://wa.me/6282384500099?text=" + pesan, '_blank');
+/* WA FORM */
+function sendWA(){
+  var nama=document.getElementById('nama').value;
+  var tanggal=document.getElementById('tanggal').value;
+  var tujuan=document.getElementById('tujuan').value;
+
+  var msg="Halo PUMA TRAVEL%0A%0A"+
+  "Nama: "+nama+"%0A"+
+  "Tanggal: "+tanggal+"%0A"+
+  "Tujuan: "+tujuan;
+
+  window.open("https://wa.me/6282384500099?text="+msg,"_blank");
 }
-</script></body>
+
+</script>
+
+</body>
 </html>
