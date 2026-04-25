@@ -66,12 +66,13 @@ color:#94a3b8;
 animation:fadeIn 1.5s ease-in-out;
 }
 
+/* ✅ DIUBAH DI SINI */
 .hero img{
-width:90%;
-max-width:520px;
-border-radius:14px;
-margin-top:20px;
-box-shadow:0 0 30px rgba(56,189,248,0.2);
+width:95%;
+max-width:850px;
+border-radius:0;
+margin-top:25px;
+filter:drop-shadow(0 0 25px rgba(255,215,0,0.25));
 animation:zoomIn 1.2s ease;
 }
 
@@ -192,10 +193,15 @@ to{opacity:1;transform:translateY(0);}
 </div><section class="hero" id="home">
 <h1>Travel Profesional & Premium Sumatera</h1>
 <p>Aman • Nyaman • Cepat • Terpercaya</p>
-<img src="innova.png" alt="Armada Innova PUMA Travel" />
+
+<!-- ✅ DIUBAH DI SINI -->
+<img src="logo.png" alt="Logo PUMA Travel" />
+
 <br>
 <a class="btn" href="#booking">Booking Sekarang</a>
-</section><div class="container"><div class="title" id="rute">Rute Populer</div><div class="grid">
+</section>
+
+<div class="container"><div class="title" id="rute">Rute Populer</div><div class="grid">
 <div class="card"><div class="route">Pekanbaru → Sidempuan</div><div class="price">Rp 200.000</div></div>
 <div class="card"><div class="route">Pekanbaru → Panyabungan</div><div class="price">Rp 250.000</div></div>
 <div class="card"><div class="route">Pekanbaru → Sibolga</div><div class="price">Rp 250.000</div></div>
@@ -208,23 +214,31 @@ to{opacity:1;transform:translateY(0);}
 <div class="card"><div class="route">P. Baru → Buton</div><div class="price">Hubungi Admin</div></div>
 <div class="card"><div class="route">P. Baru → Tembilahan</div><div class="price">Hubungi Admin</div></div>
 <div class="card"><div class="route">P. Baru → Bengkulu</div><div class="price">Hubungi Admin</div></div>
-</div><div class="title" id="booking">Booking Online</div>
+</div>
+
+<div class="title" id="booking">Booking Online</div>
 <form onsubmit="sendWA();return false;">
 <input id="nama" placeholder="Nama" required />
 <input id="tujuan" placeholder="Tujuan" required />
 <input id="tanggal" placeholder="Tanggal" required />
 <button type="submit">Kirim Booking</button>
-</form></div><section class="hero" id="kontak">
+</form></div>
+
+<section class="hero" id="kontak">
 <h2>Kontak Kami</h2>
 <p><b>WhatsApp: 082384500099</b></p>
 <p>Silahkan hubungi kami untuk info lebih lanjut 😉</p>
-</section><a class="wa" href="https://wa.me/6282384500099" target="_blank">WhatsApp</a>
+</section>
+
+<a class="wa" href="https://wa.me/6282384500099" target="_blank">WhatsApp</a>
 
 <footer>
 <b>PUMA TRAVEL GROUP</b><br>
 Corporate Premium Travel Service<br>
 © 2026 All Rights Reserved
-</footer><script>
+</footer>
+
+<script>
 function sendWA(){
 let n=document.getElementById('nama').value;
 let t=document.getElementById('tujuan').value;
