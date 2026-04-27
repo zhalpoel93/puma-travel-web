@@ -1,238 +1,250 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PUMA TRAVEL - FINAL BOSS</title>
-
-<style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PUMA TRAVEL GROUP | V8 Corporate Premium</title><meta name="description" content="PUMA Travel Group - Travel profesional Sumatera. Armada nyaman, aman, booking cepat 24 jam." />
+<meta name="keywords" content="travel pekanbaru, travel sumatera, puma travel group, travel medan, travel padang" />
+<meta name="author" content="PUMA TRAVEL GROUP" /><style>
 body{
-    margin:0;
-    font-family:Arial;
-    background:#050505;
-    color:#fff;
+margin:0;
+font-family:Arial, sans-serif;
+background:#070b16;
+color:#e5e7eb;
+overflow-x:hidden;
 }
 
-/* HEADER */
-.header{
-    text-align:center;
-    padding:15px;
-    background:#111;
-    border-bottom:1px solid gold;
-}
-.header h1{
-    color:gold;
-    margin:0;
-}
-
-/* NAV TAB */
-.nav{
-    display:flex;
-    justify-content:space-around;
-    background:#0f0f0f;
-    border-bottom:1px solid #222;
-}
-.nav button{
-    flex:1;
-    padding:12px;
-    background:none;
-    border:none;
-    color:#aaa;
-    font-weight:bold;
-}
-.nav button.active{
-    color:gold;
-    border-bottom:2px solid gold;
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,0.9);
+backdrop-filter:blur(10px);
+z-index:100;
+border-bottom:1px solid #1f2937;
 }
 
-/* SECTION */
-.section{
-    display:none;
-    padding:15px;
-}
-.section.active{
-    display:block;
-}
-
-/* CARD */
-.card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,215,0,0.2);
-    padding:12px;
-    margin:10px 0;
-    border-radius:10px;
-}
-.price{color:gold;font-weight:bold;}
-
-/* INPUT */
-input,select{
-    width:100%;
-    padding:10px;
-    margin:5px 0;
-    border-radius:8px;
-    border:none;
+.navwrap{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
 }
 
-/* BUTTON */
+.logo{
+color:#38bdf8;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.navmenu a{
+color:#cbd5e1;
+margin-left:15px;
+text-decoration:none;
+font-size:14px;
+}
+
+.navmenu a:hover{color:#38bdf8;}
+
+/* HERO */
+.hero{
+padding-top:90px;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#070b16);
+}
+
+.hero h1{
+font-size:34px;
+margin-bottom:10px;
+animation:fadeIn 1s ease-in-out;
+}
+
+.hero p{
+color:#94a3b8;
+animation:fadeIn 1.5s ease-in-out;
+}
+
+/* ✅ DIUBAH DI SINI */
+.hero img{
+width:95%;
+max-width:850px;
+border-radius:0;
+margin-top:25px;
+filter:drop-shadow(0 0 25px rgba(255,215,0,0.25));
+animation:zoomIn 1.2s ease;
+}
+
 .btn{
-    width:100%;
-    padding:12px;
-    background:linear-gradient(90deg,gold,#ffdf70);
-    border:none;
-    font-weight:bold;
-    border-radius:10px;
+display:inline-block;
+margin-top:20px;
+padding:12px 18px;
+background:#38bdf8;
+color:#0b1220;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
 }
 
-/* WA FLOAT */
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.title{
+font-size:22px;
+color:#38bdf8;
+margin:30px 0 15px;
+font-weight:700;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
+}
+
+.card{
+background:#0f172a;
+padding:15px;
+border-radius:10px;
+border:1px solid #1f2937;
+transition:0.3s;
+animation:fadeUp 1s ease;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#38bdf8;
+}
+
+.route{font-weight:600;}
+.price{color:#38bdf8;margin-top:5px;font-weight:bold;}
+
+/* FORM */
+form{max-width:500px;display:flex;flex-direction:column;gap:10px;}
+input{
+padding:12px;
+border-radius:8px;
+border:1px solid #334155;
+background:#0f172a;
+color:#fff;
+}
+button{
+background:#38bdf8;
+border:none;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+margin-top:40px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1f2937;
+color:#94a3b8;
+}
+
+/* WHATSAPP */
 .wa{
-    position:fixed;
-    right:15px;
-    bottom:15px;
-    background:#25D366;
-    padding:12px;
-    border-radius:50px;
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+color:#fff;
+padding:14px 16px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 15px rgba(34,197,94,0.3);
 }
 
-/* ADMIN LIST */
-.list{
-    max-height:300px;
-    overflow:auto;
+/* ANIMATIONS */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:translateY(0);}
 }
-.del{
-    background:red;
-    border:none;
-    color:#fff;
-    padding:5px 8px;
-    border-radius:5px;
+
+@keyframes zoomIn{
+from{transform:scale(0.9);opacity:0;}
+to{transform:scale(1);opacity:1;}
 }
-</style>
-</head>
 
-<body>
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style></head><body><div class="navbar">
+<div class="navwrap">
+<div class="logo">PUMA TRAVEL GROUP</div>
+<div class="navmenu">
+<a href="#home">Home</a>
+<a href="#rute">Rute</a>
+<a href="#booking">Booking</a>
+<a href="#kontak">Kontak</a>
+</div>
+</div>
+</div><section class="hero" id="home">
+<h1>Travel Profesional & Premium Sumatera</h1>
+<p>Aman • Nyaman • Cepat • Terpercaya</p>
 
-<div class="header">
-<h1>PUMA TRAVEL FINAL BOSS</h1>
+<!-- ✅ DIUBAH DI SINI -->
+<img src="logo.png" alt="Logo PUMA Travel" />
+
+<br>
+<a class="btn" href="#booking">Booking Sekarang</a>
+</section>
+
+<div class="container"><div class="title" id="rute">Rute Populer</div><div class="grid">
+<div class="card"><div class="route">Pekanbaru → Sidempuan</div><div class="price">Rp 200.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Panyabungan</div><div class="price">Rp 250.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Sibolga</div><div class="price">Rp 250.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Sorkam</div><div class="price">Rp 280.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Dumai</div><div class="price">Rp 160.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Medan</div><div class="price">Rp 350.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Padang</div><div class="price">Rp 240.000</div></div>
+<div class="card"><div class="route">Pekanbaru → Jambi</div><div class="price">Rp 250.000</div></div>
+<div class="card"><div class="route">P. Baru → Siak</div><div class="price">Hubungi Admin</div></div>
+<div class="card"><div class="route">P. Baru → Buton</div><div class="price">Hubungi Admin</div></div>
+<div class="card"><div class="route">P. Baru → Tembilahan</div><div class="price">Hubungi Admin</div></div>
+<div class="card"><div class="route">P. Baru → Bengkulu</div><div class="price">Hubungi Admin</div></div>
 </div>
 
-<!-- NAV -->
-<div class="nav">
-<button class="active" onclick="tab('home')">Home</button>
-<button onclick="tab('booking')">Booking</button>
-<button onclick="tab('admin')">Admin</button>
-</div>
+<div class="title" id="booking">Booking Online</div>
+<form onsubmit="sendWA();return false;">
+<input id="nama" placeholder="Nama" required />
+<input id="tujuan" placeholder="Tujuan" required />
+<input id="tanggal" placeholder="Tanggal" required />
+<button type="submit">Kirim Booking</button>
+</form></div>
 
-<!-- HOME -->
-<div id="home" class="section active">
+<section class="hero" id="kontak">
+<h2>Kontak Kami</h2>
+<p><b>WhatsApp: 082384500099</b></p>
+<p>Silahkan hubungi kami untuk info lebih lanjut 😉</p>
+</section>
 
-<div class="card">
-<b>🔥 Pekanbaru → Medan</b><br>
-<span class="price">Rp 350.000</span>
-</div>
+<a class="wa" href="https://wa.me/6282384500099" target="_blank">WhatsApp</a>
 
-<div class="card">
-<b>🔥 Pekanbaru → Sidempuan</b><br>
-<span class="price">Rp 200.000</span>
-</div>
-
-<div class="card">
-<b>🔥 Pekanbaru → Padang</b><br>
-<span class="price">Rp 240.000</span>
-</div>
-
-</div>
-
-<!-- BOOKING -->
-<div id="booking" class="section">
-
-<h3 style="color:gold">Form Booking</h3>
-
-<input id="nama" placeholder="Nama">
-<input id="hp" placeholder="No HP">
-
-<select id="rute">
-<option>Pilih Rute</option>
-<option>Pekanbaru - Medan</option>
-<option>Pekanbaru - Sidempuan</option>
-<option>Pekanbaru - Padang</option>
-<option>Pekanbaru - Dumai</option>
-</select>
-
-<button class="btn" onclick="booking()">KIRIM BOOKING</button>
-
-</div>
-
-<!-- ADMIN -->
-<div id="admin" class="section">
-
-<h3 style="color:gold">Admin Panel</h3>
-<div class="list" id="list"></div>
-
-</div>
-
-<a class="wa" href="https://wa.me/6282384500099">💬 WA</a>
+<footer>
+<b>PUMA TRAVEL GROUP</b><br>
+Corporate Premium Travel Service<br>
+© 2026 All Rights Reserved
+</footer>
 
 <script>
-
-// TAB
-function tab(id){
-    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-    document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
-
-    document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
-
-    if(id=='admin') loadData();
+function sendWA(){
+let n=document.getElementById('nama').value;
+let t=document.getElementById('tujuan').value;
+let d=document.getElementById('tanggal').value;
+let msg=`Halo Admin PUMA Travel%0ANama: ${n}%0ATujuan: ${t}%0ATanggal: ${d}`;
+window.open(`https://wa.me/6282384500099?text=${msg}`,'_blank');
 }
-
-// BOOKING SYSTEM
-function booking(){
-    let nama=document.getElementById('nama').value;
-    let hp=document.getElementById('hp').value;
-    let rute=document.getElementById('rute').value;
-
-    let data=JSON.parse(localStorage.getItem('booking')||"[]");
-    data.push({nama,hp,rute});
-    localStorage.setItem('booking',JSON.stringify(data));
-
-    let msg=`Halo Admin PUMA TRAVEL%0A
-Nama: ${nama}%0A
-HP: ${hp}%0A
-Rute: ${rute}`;
-
-    window.open("https://wa.me/6282384500099?text="+msg,"_blank");
-
-    alert("Booking terkirim!");
-}
-
-// ADMIN LOAD
-function loadData(){
-    let data=JSON.parse(localStorage.getItem('booking')||"[]");
-    let list=document.getElementById('list');
-    list.innerHTML="";
-
-    data.forEach((d,i)=>{
-        list.innerHTML+=`
-        <div class="card">
-        <b>${d.nama}</b><br>
-        ${d.hp}<br>
-        ${d.rute}<br>
-        <button class="del" onclick="hapus(${i})">Hapus</button>
-        </div>`;
-    });
-}
-
-// DELETE
-function hapus(i){
-    let data=JSON.parse(localStorage.getItem('booking')||"[]");
-    data.splice(i,1);
-    localStorage.setItem('booking',JSON.stringify(data));
-    loadData();
-}
-
-</script>
-
-</body>
+</script></body>
 </html>
